@@ -1282,34 +1282,9 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "[semicolon] -> [right_control]",
+                                "description": "[semicolon] ≈ [right_shift]",
                                 "from": {
                                     "key_code": "semicolon",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "parameters": {
-                                    "basic.to_if_alone_timeout_milliseconds": 300
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "right_control"
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "semicolon"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "[quote] -> [right_shift]",
-                                "from": {
-                                    "key_code": "quote",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -1326,13 +1301,38 @@
                                 ],
                                 "to_if_alone": [
                                     {
+                                        "key_code": "semicolon"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "description": "[quote] ≈ [fn]",
+                                "from": {
+                                    "key_code": "quote",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "parameters": {
+                                    "basic.to_if_alone_timeout_milliseconds": 300
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "fn"
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
                                         "key_code": "quote"
                                     }
                                 ],
                                 "type": "basic"
                             },
                             {
-                                "description": "[comma] -> [right_command]",
+                                "description": "[comma] ≈ [right_command]",
                                 "from": {
                                     "key_code": "comma",
                                     "modifiers": {
@@ -1357,7 +1357,7 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "[period] -> [right_option]",
+                                "description": "[period] ≈ [right_option]",
                                 "from": {
                                     "key_code": "period",
                                     "modifiers": {
@@ -1382,7 +1382,7 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "[slash] -> [fn]",
+                                "description": "[slash] ≈ [right_control]",
                                 "from": {
                                     "key_code": "slash",
                                     "modifiers": {
@@ -1396,7 +1396,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "fn"
+                                        "key_code": "right_control"
                                     }
                                 ],
                                 "to_if_alone": [
