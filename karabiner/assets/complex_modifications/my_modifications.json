@@ -1121,7 +1121,7 @@
                     ]
                 },
                 {
-                    "description": "[Q][R] -> [Return]",
+                    "description": "[Tab][R] -> [Return]",
                     "type": "basic",
                     "parameters": {
                         "basic.simultaneous_threshold_milliseconds": 1000 
@@ -1129,7 +1129,7 @@
                     "from": {
                         "simultaneous": [
                             {
-                                "key_code": "q"
+                                "key_code": "tab"
                             },
                             {
                                 "key_code": "r"
