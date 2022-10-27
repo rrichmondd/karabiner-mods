@@ -595,9 +595,9 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": " [Tab] [left_shift]",
+                                "description": "[Q] -> [left_shift]",
                                 "from": {
-                                    "key_code": "tab",
+                                    "key_code": "q",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -619,31 +619,7 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "[Q] [left_command]",
-                                "from": {
-                                    "key_code": "q",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_command"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "holdCapsLock",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "[W] [left_option]",
+                                "description": "[W] -> [left_option]",
                                 "from": {
                                     "key_code": "w",
                                     "modifiers": {
@@ -667,7 +643,7 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "[E] [equal_sign] ",
+                                "description": "[E] -> [left_command] ",
                                 "from": {
                                     "key_code": "e",
                                     "modifiers": {
@@ -678,7 +654,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "equal_sign"
+                                        "key_code": "left_command"
                                     }
                                 ],
                                 "type": "basic"
@@ -691,7 +667,31 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Y to caret",
+                                "description": "[R] -> [left_control] ",
+                                "from": {
+                                    "key_code": "r",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_control"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "holdCapsLock",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "[Y] -> [?]",
                                 "from": {
                                     "key_code": "y",
                                     "modifiers": {
@@ -702,7 +702,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "6",
+                                        "key_code": "slash",
                                         "modifiers": [
                                             "left_shift"
                                         ]
@@ -733,6 +733,30 @@
                                         "modifiers": [
                                             "left_shift"
                                         ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "holdCapsLock",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "[I] -> [=]",
+                                "from": {
+                                    "key_code": "i",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "equal_sign"
                                     }
                                 ],
                                 "type": "basic"
@@ -850,7 +874,7 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "backslash to | ",
+                                "description": "[\\] -> [|]",
                                 "from": {
                                     "key_code": "backslash",
                                     "modifiers": {
@@ -877,34 +901,7 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "[D] -> [Opt+Delete]",
-                                "from": {
-                                    "key_code": "d",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "delete_or_backspace",
-                                        "modifiers": [
-                                            "left_option"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "holdCapsLock",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "[F] -> [Fn+Delete]",
+                                "description": "[F] -> [Fn]",
                                 "from": {
                                     "key_code": "f",
                                     "modifiers": {
@@ -915,36 +912,8 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "delete_or_backspace",
+                                        "key_code": "fn",
                                         "modifiers": [
-                                            "fn"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "holdCapsLock",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "[G] -> [Opt+Fn+Delete]",
-                                "from": {
-                                    "key_code": "g",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "delete_or_backspace",
-                                        "modifiers": [
-                                            "left_option",
                                             "fn"
                                         ]
                                     }
@@ -1109,30 +1078,6 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "[C] [left_control] ",
-                                "from": {
-                                    "key_code": "c",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_control"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "holdCapsLock",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
                                 "description": "N to ampersand",
                                 "from": {
                                     "key_code": "n",
@@ -1282,7 +1227,7 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "[semicolon] -> [right_control]",
+                                "description": "[;] -> [right_shift]",
                                 "from": {
                                     "key_code": "semicolon",
                                     "modifiers": {
@@ -1296,7 +1241,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "right_control"
+                                        "key_code": "right_shift"
                                     }
                                 ],
                                 "to_if_alone": [
@@ -1307,7 +1252,7 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "[quote] -> [right_shift]",
+                                "description": "['] -> [right_control]",
                                 "from": {
                                     "key_code": "quote",
                                     "modifiers": {
@@ -1321,7 +1266,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "right_shift"
+                                        "key_code": "right_control"
                                     }
                                 ],
                                 "to_if_alone": [
@@ -1440,7 +1385,7 @@
                         "description": "Simultaneous Modifications",
                         "manipulators": [
                             {
-                                "description": "[Q][E] -> [ESC]",
+                                "description": "[Q][W] -> [Escape]",
                                 "from": {
                                     "modifiers": {
                                         "optional": [
@@ -1452,7 +1397,7 @@
                                             "key_code": "q"
                                         },
                                         {
-                                            "key_code": "e"
+                                            "key_code": "w"
                                         }
                                     ],
                                     "simultaneous_options": {
@@ -1484,7 +1429,7 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "[A][;] -> [ENTER]",
+                                "description": "[Q][R] -> [Return]",
                                 "from": {
                                     "modifiers": {
                                         "optional": [
@@ -1493,10 +1438,10 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "a"
+                                            "key_code": "q"
                                         },
                                         {
-                                            "key_code": "semicolon"
+                                            "key_code": "r"
                                         }
                                     ],
                                     "simultaneous_options": {
