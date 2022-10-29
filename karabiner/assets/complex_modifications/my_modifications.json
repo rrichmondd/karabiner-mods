@@ -418,7 +418,7 @@
                     ]
                 },
                 {
-                    "description": "[Y] -> [?]",
+                    "description": "[y] -> [Y]",
                     "type": "basic",
                     "conditions": [
                         {
@@ -435,13 +435,13 @@
                     },
                     "to": [
                         {
-                            "key_code": "slash",
+                            "key_code": "y",
                             "modifiers": ["left_shift"]
                         }
                     ]
                 },
                 {
-                    "description": "U to underscore",
+                    "description": "[u] -> [U]",
                     "type": "basic",
                     "conditions": [
                         {
@@ -458,7 +458,7 @@
                     },
                     "to": [
                         {
-                            "key_code": "hyphen",
+                            "key_code": "u",
                             "modifiers": ["left_shift"]
                         }
                     ]
@@ -486,7 +486,7 @@
                     ]
                 },
                 {
-                    "description": "O to slash",
+                    "description": "[o] -> [O]",
                     "type": "basic",
                     "conditions": [
                         {
@@ -503,12 +503,13 @@
                     },
                     "to": [
                         {
-                            "key_code": "slash"
+                            "key_code": "o",
+                            "modifiers": ["left_shift"]
                         }
                     ]
                 },
                 {
-                    "description": "P to plus sign",
+                    "description": "[p] -> [P]",
                     "type": "basic",
                     "conditions": [
                         {
@@ -525,7 +526,7 @@
                     },
                     "to": [
                         {
-                            "key_code": "equal_sign",
+                            "key_code": "p",
                             "modifiers": ["left_shift"]
                         }
                     ]
@@ -602,6 +603,28 @@
                         {
                             "key_code": "backslash",
                             "modifiers": ["left_shift"]
+                        }
+                    ]
+                },
+                {
+                    "description": "[D] -> [Enter/Return]",
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "name": "holdCapsLock",
+                            "type": "variable_if",
+                            "value": 1
+                        }
+                    ],
+                    "from": {
+                        "key_code": "d",
+                        "modifiers": {
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "return_or_enter"
                         }
                     ]
                 },
@@ -775,7 +798,7 @@
                     ]
                 },
                 {
-                    "description": "N to ampersand",
+                    "description": "[N] -> [+]",
                     "type": "basic",
                     "conditions": [
                         {
@@ -794,13 +817,13 @@
                     },
                     "to": [
                         {
-                            "key_code": "7",
+                            "key_code": "equal_sign",
                             "modifiers": ["left_shift"]
                         }
                     ]
                 },
                 {
-                    "description": "M to hyphen",
+                    "description": "[M] -> [-] ",
                     "type": "basic",
                     "conditions": [
                         {
@@ -1121,7 +1144,7 @@
                     ]
                 },
                 {
-                    "description": "[Tab][R] -> [Return]",
+                    "description": "[Q][E] -> [=]",
                     "type": "basic",
                     "parameters": {
                         "basic.simultaneous_threshold_milliseconds": 1000 
@@ -1129,7 +1152,49 @@
                     "from": {
                         "simultaneous": [
                             {
-                                "key_code": "tab"
+                                "key_code": "q"
+                            },
+                            {
+                                "key_code": "e"
+                            }
+                        ],
+                        "simultaneous_options": {
+                            "key_down_order": "strict",
+                            "to_after_key_up": [
+                               {
+                                    "set_variable": {
+                                        "name": "simultaneousVariable",
+                                        "value": 0
+                                    }
+                                }
+                            ]
+                        },
+                        "modifiers": {
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "set_variable": {
+                                "name":"simultaneousVariable",
+                                "value": 1
+                            }
+                        },
+                        {
+                            "key_code": "equal_sign"
+                        }
+                    ]
+                },
+                {
+                    "description": "[Q][R] -> [Return]",
+                    "type": "basic",
+                    "parameters": {
+                        "basic.simultaneous_threshold_milliseconds": 1000 
+                    },
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "q"
                             },
                             {
                                 "key_code": "r"
@@ -1203,6 +1268,13 @@
                             "key_code": "caps_lock"
                         }
                     ]
+                }
+            ]
+        },
+        {
+            "description": "to_if_held_down",
+            "manipulators": [
+                {
                 }
             ]
         }

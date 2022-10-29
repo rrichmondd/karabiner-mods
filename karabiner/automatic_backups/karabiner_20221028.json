@@ -667,7 +667,7 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "[R] -> [Return] ",
+                                "description": "[R] -> [left_control] ",
                                 "from": {
                                     "key_code": "r",
                                     "modifiers": {
@@ -678,7 +678,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "return_or_enter"
+                                        "key_code": "left_control"
                                     }
                                 ],
                                 "type": "basic"
@@ -793,7 +793,7 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "p",
+                                "description": "P to plus sign",
                                 "from": {
                                     "key_code": "p",
                                     "modifiers": {
@@ -1078,7 +1078,7 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "[N] -> [+]",
+                                "description": "N to ampersand",
                                 "from": {
                                     "key_code": "n",
                                     "modifiers": {
@@ -1089,7 +1089,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "equal_sign",
+                                        "key_code": "7",
                                         "modifiers": [
                                             "left_shift"
                                         ]
@@ -1105,7 +1105,7 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "[M] -> [-] ",
+                                "description": "M to hyphen",
                                 "from": {
                                     "key_code": "m",
                                     "modifiers": {
@@ -1561,12 +1561,6 @@
                                 "type": "basic"
                             }
                         ]
-                    },
-                    {
-                        "description": "to_if_held_down",
-                        "manipulators": [
-                            {}
-                        ]
                     }
                 ]
             },
@@ -1755,18 +1749,7 @@
                 "delay_milliseconds_before_open_device": 1000
             },
             "selected": true,
-            "simple_modifications": [
-                {
-                    "from": {
-                        "key_code": "left_command"
-                    },
-                    "to": [
-                        {
-                            "key_code": "left_shift"
-                        }
-                    ]
-                }
-            ],
+            "simple_modifications": [],
             "virtual_hid_keyboard": {
                 "country_code": 0,
                 "indicate_sticky_modifier_keys_state": true,
