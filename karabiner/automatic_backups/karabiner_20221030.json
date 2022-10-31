@@ -244,7 +244,7 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "[Q] -> [FN]",
+                                "description": "[q] -> [left_shift]",
                                 "from": {
                                     "key_code": "q",
                                     "modifiers": {
@@ -255,7 +255,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "fn"
+                                        "key_code": "left_shift"
                                     }
                                 ],
                                 "type": "basic"
@@ -268,7 +268,7 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "[W] -> [left_option]",
+                                "description": "[w] -> [left_option]",
                                 "from": {
                                     "key_code": "w",
                                     "modifiers": {
@@ -292,7 +292,7 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "[E] -> [left_command] ",
+                                "description": "[e] -> [left_command] ",
                                 "from": {
                                     "key_code": "e",
                                     "modifiers": {
@@ -316,7 +316,7 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "[F] -> [left_shift] ",
+                                "description": "[f] -> [FN]",
                                 "from": {
                                     "key_code": "f",
                                     "modifiers": {
@@ -327,7 +327,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "left_shift"
+                                        "key_code": "fn"
                                     }
                                 ],
                                 "type": "basic"
@@ -340,64 +340,9 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "[Y] -> [REDO]",
+                                "description": "H to left_arrow",
                                 "from": {
-                                    "key_code": "y",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "z",
-                                        "modifiers": [
-                                            "left_command",
-                                            "left_shift"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "holdTab",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "[U] -> [UNDO]",
-                                "from": {
-                                    "key_code": "u",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "z",
-                                        "modifiers": [
-                                            "left_command"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "holdTab",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "[J] to [⬅︎]",
-                                "from": {
-                                    "key_code": "j",
+                                    "key_code": "h",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -419,9 +364,9 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "[K] to [⬇︎]",
+                                "description": "J to down_arrow",
                                 "from": {
-                                    "key_code": "k",
+                                    "key_code": "j",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -443,9 +388,9 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "[I] to [⬆︎]",
+                                "description": "K to up_arrow",
                                 "from": {
-                                    "key_code": "i",
+                                    "key_code": "k",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -467,7 +412,7 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "[L] to [➡︎]",
+                                "description": "L to right_arrow",
                                 "from": {
                                     "key_code": "l",
                                     "modifiers": {
@@ -491,7 +436,7 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "[SPACEBAR] -> [BACKSPACE]",
+                                "description": "[Spacebar] -> [Backspace]",
                                 "from": {
                                     "key_code": "spacebar",
                                     "modifiers": {
@@ -515,9 +460,9 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "[o] -> [Enter]",
+                                "description": "[0] -> [Return]",
                                 "from": {
-                                    "key_code": "o",
+                                    "key_code": "0",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -614,7 +559,7 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "[X][C] -> [CapsLock]",
+                                "description": "[J][9] -> [Return]",
                                 "from": {
                                     "modifiers": {
                                         "optional": [
@@ -623,10 +568,10 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "x"
+                                            "key_code": "j"
                                         },
                                         {
-                                            "key_code": "c"
+                                            "key_code": "9"
                                         }
                                     ],
                                     "simultaneous_options": {
@@ -652,7 +597,7 @@
                                         }
                                     },
                                     {
-                                        "key_code": "caps_lock"
+                                        "key_code": "return_or_enter"
                                     }
                                 ],
                                 "type": "basic"
@@ -777,9 +722,9 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "[esc] -> [fn]",
+                                "description": "[slash] -> [fn]",
                                 "from": {
-                                    "key_code": "escape",
+                                    "key_code": "slash",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -792,6 +737,11 @@
                                 "to": [
                                     {
                                         "key_code": "fn"
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "slash"
                                     }
                                 ],
                                 "type": "basic"
@@ -854,20 +804,6 @@
                     },
                     "ignore": false,
                     "manipulate_caps_lock_led": false,
-                    "simple_modifications": [],
-                    "treat_as_built_in_keyboard": false
-                },
-                {
-                    "disable_built_in_keyboard_if_exists": false,
-                    "fn_function_keys": [],
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "is_pointing_device": false,
-                        "product_id": 34304,
-                        "vendor_id": 1452
-                    },
-                    "ignore": false,
-                    "manipulate_caps_lock_led": true,
                     "simple_modifications": [],
                     "treat_as_built_in_keyboard": false
                 }
@@ -999,18 +935,7 @@
                 "delay_milliseconds_before_open_device": 1000
             },
             "selected": true,
-            "simple_modifications": [
-                {
-                    "from": {
-                        "key_code": "left_command"
-                    },
-                    "to": [
-                        {
-                            "key_code": "tab"
-                        }
-                    ]
-                }
-            ],
+            "simple_modifications": [],
             "virtual_hid_keyboard": {
                 "country_code": 0,
                 "indicate_sticky_modifier_keys_state": true,
