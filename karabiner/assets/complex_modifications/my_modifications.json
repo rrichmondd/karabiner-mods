@@ -258,6 +258,52 @@
                     ]
                 },
                 {
+                    "description": "[hyphen] -> [underscore]",
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "name": "holdCaps",
+                            "type": "variable_if",
+                            "value": 1
+                        }
+                    ],
+                    "from": {
+                        "key_code": "hyphen",
+                        "modifiers": {
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "hyphen",
+                            "modifiers": ["left_shift"]
+                        }
+                    ]
+                },
+                {
+                    "description": "[equal_sign] -> [plus_sign]",
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "name": "holdCaps",
+                            "type": "variable_if",
+                            "value": 1
+                        }
+                    ],
+                    "from": {
+                        "key_code": "equal_sign",
+                        "modifiers": {
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "equal_sign",
+                            "modifiers": ["left_shift"]
+                        }
+                    ]
+                },
+                {
                     "description": "[tab] -> [capslock]",
                     "type": "basic",
                     "conditions": [
@@ -280,7 +326,7 @@
                     ]
                 },
                 {
-                    "description": "[Q] -> [shift]",
+                    "description": "[q] -> [shift]",
                     "type": "basic",
                     "conditions": [
                         {
@@ -302,7 +348,7 @@
                     ]
                 },
                 {
-                    "description": "[W] -> [option]",
+                    "description": "[w] -> [option]",
                     "type": "basic",
                     "conditions": [
                         {
@@ -324,7 +370,7 @@
                     ]
                 },
                 {
-                    "description": "[E] -> [left_command] ",
+                    "description": "[e] -> [left_command] ",
                     "type": "basic",
                     "conditions": [
                         {
@@ -346,7 +392,7 @@
                     ]
                 },
                 {
-                    "description": "[R] -> [FN] ",
+                    "description": "[r] -> [control] ",
                     "type": "basic",
                     "conditions": [
                         {
@@ -363,34 +409,12 @@
                     },
                     "to": [
                         {
-                            "key_code": "fn"
-                        }
-                    ]
-                },
-                {
-                    "description": "[T] -> [control] ",
-                    "type": "basic",
-                    "conditions": [
-                        {
-                            "name": "holdCaps",
-                            "type": "variable_if",
-                            "value": 1
-                        }
-                    ],
-                    "from": {
-                        "key_code": "t",
-                        "modifiers": {
-                            "optional": ["any"]
-                        }
-                    },
-                    "to": [
-                        {
                             "key_code": "left_control"
                         }
                     ]
                 },
                 {
-                    "description": "[Y] -> [REDO]",
+                    "description": "[y] -> [single quote]",
                     "type": "basic",
                     "conditions": [
                         {
@@ -407,13 +431,12 @@
                     },
                     "to": [
                         {
-                            "key_code": "z",
-                            "modifiers": ["left_command","left_shift"]
+                            "key_code": "quote"
                         }
                     ]
                 },
                 {
-                    "description": "[U] -> [{]",
+                    "description": "[u] -> [double quote]",
                     "type": "basic",
                     "conditions": [
                         {
@@ -430,13 +453,13 @@
                     },
                     "to": [
                         {
-                            "key_code": "open_bracket",
+                            "key_code": "quote",
                             "modifiers": ["left_shift"]
                         }
                     ]
                 },
                 {
-                    "description": "[I] -> [[]",
+                    "description": "[i] -> [equal sign]",
                     "type": "basic",
                     "conditions": [
                         {
@@ -453,12 +476,12 @@
                     },
                     "to": [
                         {
-                            "key_code": "open_bracket"
+                            "key_code": "equal_sign"
                         }
                     ]
                 },
                 {
-                    "description": "[O] -> []]",
+                    "description": "[o] -> [plus sign]",
                     "type": "basic",
                     "conditions": [
                         {
@@ -475,12 +498,13 @@
                     },
                     "to": [
                         {
-                            "key_code": "close_bracket"
+                            "key_code": "equal_sign",
+                            "modifiers": ["left_shift"]
                         }
                     ]
                 },
                 {
-                    "description": "[P] -> [}]",
+                    "description": "[p] -> [return/enter]",
                     "type": "basic",
                     "conditions": [
                         {
@@ -497,13 +521,81 @@
                     },
                     "to": [
                         {
-                            "key_code": "close_bracket",
-                            "modifiers":["left_shift"]
+                            "key_code": "return_or_enter"
                         }
                     ]
                 },
                 {
-                    "description": "[A] -> [']",
+                    "description": "[square bracket] -> [open curly brace]",
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "name": "holdCaps",
+                            "type": "variable_if",
+                            "value": 1
+                        }
+                    ],
+                    "from": {
+                        "key_code": "open_bracket",
+                        "modifiers": {
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "open_bracket",
+                            "modifiers": ["left_shift"]
+                        }
+                    ]
+                },
+                {
+                    "description": "[square bracket] -> [close curly brace]",
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "name": "holdCaps",
+                            "type": "variable_if",
+                            "value": 1
+                        }
+                    ],
+                    "from": {
+                        "key_code": "close_bracket",
+                        "modifiers": {
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "close_bracket",
+                            "modifiers": ["left_shift"]
+                        }
+                    ]
+                },
+                {
+                    "description": "[backslash] -> [vertical line]",
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "name": "holdCaps",
+                            "type": "variable_if",
+                            "value": 1
+                        }
+                    ],
+                    "from": {
+                        "key_code": "backslash",
+                        "modifiers": {
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "backslash",
+                            "modifiers": ["left_shift"]
+                        }
+                    ]
+                },
+                {
+                    "description": "[a] -> [escape]",
                     "type": "basic",
                     "conditions": [
                         {
@@ -520,12 +612,12 @@
                     },
                     "to": [
                         {
-                            "key_code": "quote"
+                            "key_code": "escape"
                         }
                     ]
                 },
                 {
-                    "description": "[S] -> [\"]",
+                    "description": "[s] -> [shift + option]",
                     "type": "basic",
                     "conditions": [
                         {
@@ -542,13 +634,13 @@
                     },
                     "to": [
                         {
-                            "key_code": "quote",
-                            "modifiers": "left_shift"
+                            "key_code": "left_option",
+                            "modifiers": ["left_shift"]
                         }
                     ]
                 },
                 {
-                    "description": "[D] -> [=]",
+                    "description": "[d] -> [shift + command]",
                     "type": "basic",
                     "conditions": [
                         {
@@ -565,12 +657,13 @@
                     },
                     "to": [
                         {
-                            "key_code": "equal_sign"
+                            "key_code": "left_command",
+                            "modifiers": ["left_shift"]
                         }
                     ]
                 },
                 {
-                    "description": "[F] -> [+]",
+                    "description": "[F] -> [FN]",
                     "type": "basic",
                     "conditions": [
                         {
@@ -587,31 +680,7 @@
                     },
                     "to": [
                         {
-                            "key_code": "equal_sign",
-                            "modifiers": "left_shift"
-                        }
-                    ]
-                },
-                {
-                    "description": "[G] -> [|]",
-                    "type": "basic",
-                    "conditions": [
-                        {
-                            "name": "holdCaps",
-                            "type": "variable_if",
-                            "value": 1
-                        }
-                    ],
-                    "from": {
-                        "key_code": "g",
-                        "modifiers": {
-                            "optional": ["any"]
-                        }
-                    },
-                    "to": [
-                        {
-                            "key_code": "backslash",
-                            "modifiers": "left_shift"
+                            "key_code": "fn"
                         }
                     ]
                 },
@@ -700,9 +769,7 @@
                     "from": {
                         "key_code": "l",
                         "modifiers": {
-                            "optional": [
-                                "any"
-                            ]
+                            "optional": [ "any" ]
                         }
                     },
                     "to": [
@@ -737,7 +804,32 @@
                     ]
                 },
                 {
-                    "description": "[Z] to [undo]",
+                    "description": "['] to [double quote]",
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "name": "holdCaps",
+                            "type": "variable_if",
+                            "value": 1
+                        }
+                    ],
+                    "from": {
+                        "key_code": "quote",
+                        "modifiers": {
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "quote",
+                            "modifiers": ["left_shift"]
+                        }
+                    ]
+                },
+                {
+                    "description": "[z] to [undo]",
                     "type": "basic",
                     "conditions": [
                         {
@@ -782,7 +874,7 @@
                     "to": [
                         {
                             "key_code": "x",
-                            "modifiers": "left_command"
+                            "modifiers": ["left_command"]
                         }
                     ]
                 },
@@ -837,31 +929,7 @@
                     ]
                 },
                 {
-                    "description": "[B] to [backslash]",
-                    "type": "basic",
-                    "conditions": [
-                        {
-                            "name": "holdCaps",
-                            "type": "variable_if",
-                            "value": 1
-                        }
-                    ],
-                    "from": {
-                        "key_code": "backslash",
-                        "modifiers": {
-                            "optional": [
-                                "any"
-                            ]
-                        }
-                    },
-                    "to": [
-                        {
-                            "key_code": "backslash"
-                        }
-                    ]
-                },
-                {
-                    "description": "[N] to [_]",
+                    "description": "[N] to [underscore]",
                     "type": "basic",
                     "conditions": [
                         {
@@ -881,12 +949,12 @@
                     "to": [
                         {
                             "key_code": "hyphen",
-                            "modifiers": "left_shift"
+                            "modifiers": ["left_shift"]
                         }
                     ]
                 },
                 {
-                    "description": "[M] to [-]",
+                    "description": "[M] to [hyphen]",
                     "type": "basic",
                     "conditions": [
                         {
@@ -930,7 +998,7 @@
                     "to": [
                         {
                             "key_code": "comma",
-                            "modifiers": "left_shift"
+                            "modifiers": ["left_shift"]
                         }
                     ]
                 },
@@ -955,7 +1023,7 @@
                     "to": [
                         {
                             "key_code": "period",
-                            "modifiers": "left_shift"
+                            "modifiers": ["left_shift"]
                         }
                     ]
                 },
@@ -980,7 +1048,7 @@
                     "to": [
                         {
                             "key_code": "slash",
-                            "modifiers": "left_shift"
+                            "modifiers": ["left_shift"]
                         }
                     ]
                 },
@@ -1037,95 +1105,6 @@
             ]
         },
         {
-            "description": "Simultaneous",
-            "manipulators": [
-                {
-                    "description": "[Q][W] -> [Escape]",
-                    "type": "basic",
-                    "parameters": {
-                        "basic.simultaneous_threshold_milliseconds": 1000 
-                    },
-                    "from": {
-                        "simultaneous": [
-                            {
-                                "key_code": "q"
-                            },
-                            {
-                                "key_code": "w"
-                            }
-                        ],
-                        "simultaneous_options": {
-                            "key_down_order": "strict",
-                            "to_after_key_up": [
-                               {
-                                    "set_variable": {
-                                        "name": "simultaneousVariable",
-                                        "value": 0
-                                    }
-                                }
-                            ]
-                        },
-                        "modifiers": {
-                            "optional": ["any"]
-                        }
-                    },
-                    "to": [
-                        {
-                            "set_variable": {
-                                "name":"simultaneousVariable",
-                                "value": 1
-                            }
-                        },
-                        {
-                            "key_code": "escape"
-                        }
-                    ]
-                },
-                {
-                    "description": "[X][C] -> [CapsLock]",
-                    "type": "basic",
-                    "parameters": {
-                        "basic.simultaneous_threshold_milliseconds": 1000 
-                    },
-                    "from": {
-                        "simultaneous": [
-                            {
-                                "key_code": "x"
-                            },
-                            {
-                                "key_code": "c"
-                            }
-                        ],
-                        "simultaneous_options": {
-                            "key_down_order": "strict",
-                            "to_after_key_up": [
-                               {
-                                    "set_variable": {
-                                        "name": "simultaneousVariable",
-                                        "value": 0
-                                    }
-                                }
-                            ]
-                        },
-                        "modifiers": {
-                            "optional": ["any"]
-                        }
-                    },
-                    "to": [
-                        {
-                            "set_variable": {
-                                "name":"simultaneousVariable",
-                                "value": 1
-                            }
-                        },
-                        {
-                            "key_code": "caps_lock"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
             "description": "Remap Modifiers",
             "manipulators": [
                 {
@@ -1147,31 +1126,6 @@
                     "to_if_alone": [
                         {
                             "key_code": "semicolon"
-                        }
-                    ],
-                    "parameters": {
-                        "basic.to_if_alone_timeout_milliseconds": 300
-                    }
-                },
-                {
-                    "description": "['] -> [control]",
-                    "type": "basic",
-                    "from": {
-                        "key_code": "quote",
-                        "modifiers": {
-                            "optional": [
-                                "any"
-                            ]
-                        }
-                    },
-                    "to": [
-                        {
-                            "key_code": "right_control"
-                        }
-                    ],
-                        "to_if_alone": [
-                        {
-                            "key_code": "quote"
                         }
                     ],
                     "parameters": {

@@ -324,60 +324,6 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "[hyphen] -> [underscore]",
-                                "from": {
-                                    "key_code": "hyphen",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "hyphen",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "holdCaps",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "[equal_sign] -> [plus_sign]",
-                                "from": {
-                                    "key_code": "equal_sign",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "equal_sign",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "holdCaps",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
                                 "description": "[tab] -> [capslock]",
                                 "from": {
                                     "key_code": "tab",
@@ -402,7 +348,7 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "[q] -> [shift]",
+                                "description": "[Q] -> [shift]",
                                 "from": {
                                     "key_code": "q",
                                     "modifiers": {
@@ -426,7 +372,7 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "[w] -> [option]",
+                                "description": "[W] -> [option]",
                                 "from": {
                                     "key_code": "w",
                                     "modifiers": {
@@ -450,7 +396,7 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "[e] -> [left_command] ",
+                                "description": "[E] -> [left_command] ",
                                 "from": {
                                     "key_code": "e",
                                     "modifiers": {
@@ -474,9 +420,33 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "[r] -> [control] ",
+                                "description": "[R] -> [FN] ",
                                 "from": {
                                     "key_code": "r",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "fn"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "holdCaps",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "[T] -> [control] ",
+                                "from": {
+                                    "key_code": "t",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -498,7 +468,7 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "[y] -> [single quote]",
+                                "description": "[Y] -> [REDO]",
                                 "from": {
                                     "key_code": "y",
                                     "modifiers": {
@@ -509,7 +479,11 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "quote"
+                                        "key_code": "z",
+                                        "modifiers": [
+                                            "right_command",
+                                            "right_shift"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -522,7 +496,7 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "[u] -> [double quote]",
+                                "description": "[U] -> [underscore]",
                                 "from": {
                                     "key_code": "u",
                                     "modifiers": {
@@ -533,7 +507,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "quote",
+                                        "key_code": "hyphen",
                                         "modifiers": [
                                             "left_shift"
                                         ]
@@ -549,7 +523,7 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "[i] -> [equal sign]",
+                                "description": "[I] -> [=]",
                                 "from": {
                                     "key_code": "i",
                                     "modifiers": {
@@ -573,7 +547,7 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "[o] -> [plus sign]",
+                                "description": "[O] -> [slash]",
                                 "from": {
                                     "key_code": "o",
                                     "modifiers": {
@@ -584,10 +558,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "equal_sign",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
+                                        "key_code": "slash"
                                     }
                                 ],
                                 "type": "basic"
@@ -600,7 +571,7 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "[p] -> [return/enter]",
+                                "description": "[P] -> [+]",
                                 "from": {
                                     "key_code": "p",
                                     "modifiers": {
@@ -611,7 +582,10 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "return_or_enter"
+                                        "key_code": "equal_sign",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -705,7 +679,7 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "[a] -> [escape]",
+                                "description": "[A] -> [']",
                                 "from": {
                                     "key_code": "a",
                                     "modifiers": {
@@ -716,7 +690,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "escape"
+                                        "key_code": "quote"
                                     }
                                 ],
                                 "type": "basic"
@@ -729,7 +703,7 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "[s] -> [shift + option]",
+                                "description": "[S] -> [\"]",
                                 "from": {
                                     "key_code": "s",
                                     "modifiers": {
@@ -740,10 +714,8 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "left_option",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
+                                        "key_code": "quote",
+                                        "modifiers": "left_shift"
                                     }
                                 ],
                                 "type": "basic"
@@ -756,7 +728,7 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "[d] -> [shift + command]",
+                                "description": "[D] -> [+]",
                                 "from": {
                                     "key_code": "d",
                                     "modifiers": {
@@ -767,10 +739,8 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "left_command",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
+                                        "key_code": "equal_sign",
+                                        "modifiers": "left_shift"
                                     }
                                 ],
                                 "type": "basic"
@@ -783,7 +753,7 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "[F] -> [FN]",
+                                "description": "[F] -> [enter]",
                                 "from": {
                                     "key_code": "f",
                                     "modifiers": {
@@ -794,7 +764,34 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "fn"
+                                        "key_code": "return_or_enter"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "holdCaps",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "[G] -> [|]",
+                                "from": {
+                                    "key_code": "g",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "backslash",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -940,9 +937,7 @@
                                 "to": [
                                     {
                                         "key_code": "quote",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
+                                        "modifiers": "left_shift"
                                     }
                                 ],
                                 "type": "basic"
@@ -955,7 +950,7 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "[z] to [undo]",
+                                "description": "[Z] to [undo]",
                                 "from": {
                                     "key_code": "z",
                                     "modifiers": {
@@ -994,9 +989,7 @@
                                 "to": [
                                     {
                                         "key_code": "x",
-                                        "modifiers": [
-                                            "left_command"
-                                        ]
+                                        "modifiers": "left_command"
                                     }
                                 ],
                                 "type": "basic"
@@ -1063,9 +1056,9 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "[N] to [underscore]",
+                                "description": "[B] to [backslash]",
                                 "from": {
-                                    "key_code": "n",
+                                    "key_code": "b",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -1074,10 +1067,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "hyphen",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
+                                        "key_code": "backslash"
                                     }
                                 ],
                                 "type": "basic"
@@ -1090,7 +1080,31 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "[M] to [hyphen]",
+                                "description": "[N] to [enter]",
+                                "from": {
+                                    "key_code": "n",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "return_or_enter"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "holdCaps",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "[M] to [-]",
                                 "from": {
                                     "key_code": "m",
                                     "modifiers": {
@@ -1126,9 +1140,7 @@
                                 "to": [
                                     {
                                         "key_code": "comma",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
+                                        "modifiers": "left_shift"
                                     }
                                 ],
                                 "type": "basic"
@@ -1153,9 +1165,7 @@
                                 "to": [
                                     {
                                         "key_code": "period",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
+                                        "modifiers": "left_shift"
                                     }
                                 ],
                                 "type": "basic"
@@ -1180,9 +1190,7 @@
                                 "to": [
                                     {
                                         "key_code": "slash",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
+                                        "modifiers": "left_shift"
                                     }
                                 ],
                                 "type": "basic"
@@ -1242,6 +1250,55 @@
                         ]
                     },
                     {
+                        "description": "Simultaneous",
+                        "manipulators": [
+                            {
+                                "description": "[q][w] -> [Escape]",
+                                "from": {
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    },
+                                    "simultaneous": [
+                                        {
+                                            "key_code": "q"
+                                        },
+                                        {
+                                            "key_code": "w"
+                                        }
+                                    ],
+                                    "simultaneous_options": {
+                                        "key_down_order": "strict",
+                                        "to_after_key_up": [
+                                            {
+                                                "set_variable": {
+                                                    "name": "simultaneousVariable",
+                                                    "value": 0
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                "parameters": {
+                                    "basic.simultaneous_threshold_milliseconds": 1000
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "simultaneousVariable",
+                                            "value": 1
+                                        }
+                                    },
+                                    {
+                                        "key_code": "escape"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Remap Modifiers",
                         "manipulators": [
                             {
@@ -1265,6 +1322,31 @@
                                 "to_if_alone": [
                                     {
                                         "key_code": "semicolon"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "description": "['] -> [control]",
+                                "from": {
+                                    "key_code": "quote",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "parameters": {
+                                    "basic.to_if_alone_timeout_milliseconds": 300
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_control"
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "quote"
                                     }
                                 ],
                                 "type": "basic"
